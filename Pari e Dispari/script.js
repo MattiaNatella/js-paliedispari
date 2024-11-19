@@ -22,7 +22,6 @@ const numeroUtente = parseInt(prompt('Inserisci un numero da 1 a 5'));
 const numeroPc = getRandom();
 const risultato = numeroUtente + numeroPc
 
-
 console.log(`
   l'Utente ha scelto ${sceltaUtente} e giocato il numero ${numeroUtente}
   l'Avversario ha giocato il numero ${numeroPc}

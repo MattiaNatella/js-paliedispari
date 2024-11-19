@@ -25,8 +25,8 @@ const risultato = numeroUtente + numeroPc
 
 console.log(`
   l'Utente ha scelto ${sceltaUtente} e giocato il numero ${numeroUtente}
-  l'Avversario ha giocato il numero ${numeroPc} per cui `, winner(risultato,sceltaUtente))
-
+  l'Avversario ha giocato il numero ${numeroPc}
+  il risultato è ${risultato}, per cui`, winner(risultato,sceltaUtente))
 
 function winner(somma,pariDispari) {
   if ((!(somma % 2) && pariDispari === 'pari') || (somma % 2 && pariDispari === 'dispari')){
@@ -35,8 +35,6 @@ function winner(somma,pariDispari) {
     return 'HAI PERSO'
   }
 }
-
-
 
 function getRandom() {
   return Math.ceil(Math.random()*6);

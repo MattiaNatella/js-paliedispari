@@ -37,5 +37,5 @@ function winner(somma,pariDispari) {
 }
 
 function getRandom() {
-  return Math.ceil(Math.random()*6);
+  return Math.ceil(Math.random()*5);
 }

@@ -17,10 +17,26 @@ Logica
 
 */
 
+const sceltaUtente = prompt('Inserisci pari o dispari')
+const numeroUtente = parseInt(prompt('Inserisci un numero da 1 a 5'));
+const numeroPc = getRandom();
+const risultato = numeroUtente + numeroPc
 
-const numeroUtente = prompt('Inserisci un numero da 1 a 5')
-const numeroPC = getRandom();
-console.log('il numero scelto dal pc è ',numeroPC)
+
+console.log(`
+  l'Utente ha scelto ${sceltaUtente} e giocato il numero ${numeroUtente}
+  l'Avversario ha giocato il numero ${numeroPc} per cui `, winner(risultato,sceltaUtente))
+
+
+function winner(somma,pariDispari) {
+  if ((!(somma % 2) && pariDispari === 'pari') || (somma % 2 && pariDispari === 'dispari')){
+    return 'HAI VINTO'
+  } else {
+    return 'HAI PERSO'
+  }
+}
+
+
 
 function getRandom() {
   return Math.ceil(Math.random()*6);

@@ -13,15 +13,18 @@ logica
 4.La funzione isPalindroma mi dovrà restituire true se tutte le comparazioni danno esito true, altrimenti false
 */
 
-let parolaUtente = prompt('Inserisci una parola')
-let parolaReverse = parolaUtente.toLowerCase().split('').reverse().join('')
-console.log(parolaReverse)
+const parolaUtente = prompt('Inserisci una parola')
+console.log(isPalindroma(parolaUtente));
 
-if (parolaUtente.toLowerCase() === parolaReverse) {
-  console.log('La parola è palindroma')
-} else {
-  console.log('La parola non è palindroma')
+function isPalindroma(parola) {
+  let parolaReverse = parola.toLowerCase().split('').reverse().join('')
+  if (parola.toLowerCase() === parolaReverse) {
+    return `La parola ${parola} è palindroma`
+  } else {
+    return `La parola ${parola} non è palindroma`
+  }
 }
+
 
 
 
